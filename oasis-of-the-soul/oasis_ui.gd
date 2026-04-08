@@ -12,8 +12,10 @@ func _process(delta: float) -> void:
 
 
 func _on_button_meditation_relax_pressed() -> void:
-	print("进入冥想模块") # Replace with function body.
+	print("正在进入冥想模块...") 
+	get_tree().change_scene_to_file("res://scene_meditation_relax.tscn")# Replace with function body.
 
 
 func _on_button_small_game_pressed() -> void:
-	print("进入压力释放模块") # Replace with function body.
+	print("正在进入压力释放模块...")
+	get_tree().change_scene_to_file("res://scene_stress_release.tscn") # Replace with function body.

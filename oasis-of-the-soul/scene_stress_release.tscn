@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8bfq0p6pi2g0"]
+
+[ext_resource type="Script" uid="uid://dj2qev5o5cwbu" path="res://scene_stress_release.gd" id="1_wx4db"]
+
+[node name="stress_release" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wx4db")
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="game1" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 311.0
+offset_right = 562.0
+offset_bottom = 408.0
+color = Color(0.05490196, 1, 1, 1)
+
+[node name="Button1" type="Button" parent="game1"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="game2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 463.0
+offset_right = 560.0
+offset_bottom = 560.0
+color = Color(1.92523e-07, 0.82302785, 0.8231111, 1)
+
+[node name="Button2" type="Button" parent="game2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Return" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 1174.0
+offset_right = 680.0
+offset_bottom = 1240.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button_return" type="Button" parent="Return"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="game1/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="game2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Return/Button_return" to="." method="_on_button_return_pressed"]
