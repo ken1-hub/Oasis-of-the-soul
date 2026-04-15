@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqftn8wwii62h"]
+
+[ext_resource type="Script" uid="uid://cijx8oqpjmvb8" path="res://assets/scripts/oasis_ui.gd" id="1_o67qd"]
+[ext_resource type="Texture2D" uid="uid://ct7nc7kftj8ww" path="res://assets/ui/icons/sleeps.png" id="2_5t3r3"]
+[ext_resource type="Texture2D" uid="uid://dxboaa0fagb8w" path="res://assets/ui/icons/stars.png" id="3_2yups"]
+
+[node name="Oasis_ui" type="Control"]
+self_modulate = Color(0.42352942, 0.60784316, 0.8117647, 1)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o67qd")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.42352942, 0.60784316, 0.8117647, 1)
+
+[node name="Meditationrelax" type="Node2D" parent="."]
+
+[node name="sleeps" type="Sprite2D" parent="Meditationrelax"]
+position = Vector2(671.72064, 348.11456)
+scale = Vector2(0.029584145, 0.036268745)
+texture = ExtResource("2_5t3r3")
+region_enabled = true
+region_rect = Rect2(0, 0, 2047.133, 1648.961)
+
+[node name="Button1" type="Button" parent="Meditationrelax/sleeps"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1004.6133
+offset_top = -830.3164
+offset_right = -1023.5
+offset_bottom = -796.42773
+grow_horizontal = 2
+grow_vertical = 2
+text = "冥想"
+
+[node name="Stressrelease" type="Node2D" parent="."]
+
+[node name="stars" type="Sprite2D" parent="Stressrelease"]
+position = Vector2(673, 450)
+scale = Vector2(0.029296856, 0.03289476)
+texture = ExtResource("3_2yups")
+region_enabled = true
+region_rect = Rect2(0, 0, 2048, 1824.6289)
+
+[node name="Button2" type="Button" parent="Stressrelease/stars"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1024.0
+offset_top = -911.999
+offset_right = -1024.0
+offset_bottom = -880.999
+grow_horizontal = 2
+grow_vertical = 2
+text = "小游戏"
+
+[connection signal="pressed" from="Meditationrelax/sleeps/Button1" to="." method="_on_button_meditation_relax_pressed"]
+[connection signal="pressed" from="Stressrelease/stars/Button2" to="." method="_on_button_small_game_pressed"]
