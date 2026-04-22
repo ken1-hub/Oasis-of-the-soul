@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8bfq0p6pi2g0"]
+[gd_scene load_steps=2 format=3 uid="uid://b8bfq0p6pi2g0"]
 
 [ext_resource type="Script" uid="uid://dj2qev5o5cwbu" path="res://assets/scripts/scene_stress_release.gd" id="1_r3l4c"]
-[ext_resource type="Texture2D" uid="uid://ct7nc7kftj8ww" path="res://assets/ui/icons/sleeps.png" id="2_cd6wh"]
-[ext_resource type="Texture2D" uid="uid://dxboaa0fagb8w" path="res://assets/ui/icons/stars.png" id="3_1lhlb"]
 
 [node name="stress_release" type="Control"]
 layout_mode = 3
@@ -20,36 +18,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Meditationrelax" type="Node2D" parent="."]
-
-[node name="Sleeps" type="Sprite2D" parent="Meditationrelax"]
-position = Vector2(671.72064, 348.11456)
-scale = Vector2(0.029584145, 0.036268745)
-texture = ExtResource("2_cd6wh")
-region_enabled = true
-region_rect = Rect2(0, 0, 2047.133, 1648.961)
-
-[node name="Buttontomeditation" type="Button" parent="Meditationrelax/Sleeps"]
-self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1023.5
-offset_top = -823.999
-offset_right = -963.9414
-offset_bottom = -764.22815
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Stressrelease" type="Node2D" parent="."]
-
-[node name="stars" type="Sprite2D" parent="Stressrelease"]
-position = Vector2(673, 450)
-scale = Vector2(0.029296856, 0.03289476)
-texture = ExtResource("3_1lhlb")
-region_enabled = true
-region_rect = Rect2(0, 0, 2048, 1824.6289)
 
 [node name="game1" type="ColorRect" parent="."]
 layout_mode = 0
@@ -102,7 +70,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="pressed" from="Meditationrelax/Sleeps/Buttontomeditation" to="." method="_on_buttontomeditation_pressed"]
 [connection signal="pressed" from="game1/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="game2/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Return/Button_return" to="." method="_on_button_return_pressed"]

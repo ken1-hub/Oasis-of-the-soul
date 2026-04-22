@@ -6,15 +6,20 @@ func _ready() -> void:
 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
-func _on_button_meditation_relax_pressed() -> void:
-	print("正在进入冥想模块...") 
+
+
+
+func _on_emotiontreehole_pressed() -> void:
+	get_tree().change_scene_to_file("res://assets/scenes/emotion_treehole.tscn")
+
+
+func _on_meditation_relax_pressed() -> void:
 	get_tree().change_scene_to_file("res://assets/scenes/scene_meditation_relax.tscn")
 
 
-func _on_button_small_game_pressed() -> void:
-	print("正在进入压力释放模块...")
+func _on_stress_release_pressed() -> void:
 	get_tree().change_scene_to_file("res://assets/scenes/scene_stress_release.tscn")

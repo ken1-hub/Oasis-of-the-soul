@@ -1,15 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://5nifo4kn0ycy"]
+[gd_scene load_steps=2 format=3 uid="uid://b3a35uq13t06b"]
 
-[ext_resource type="Script" uid="uid://dovop1y8qr8ux" path="res://assets/scripts/scene_meditation_relax.gd" id="1_4hj56"]
+[ext_resource type="Script" uid="uid://ch1ncfhw55gus" path="res://assets/scenes/emotion_treehole.gd" id="1_4lj8y"]
 
-[node name="meditation_relax" type="Control"]
+[node name="emotion_treehole" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4hj56")
+script = ExtResource("1_4lj8y")
 
 [node name="background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -18,7 +18,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.28614834, 0.46571213, 0.66133046, 1)
 
 [node name="Return" type="ColorRect" parent="."]
 layout_mode = 0

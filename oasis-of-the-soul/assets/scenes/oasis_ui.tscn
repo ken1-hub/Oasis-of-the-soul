@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqftn8wwii62h"]
+[gd_scene load_steps=8 format=3 uid="uid://cqftn8wwii62h"]
 
 [ext_resource type="Script" uid="uid://cijx8oqpjmvb8" path="res://assets/scripts/oasis_ui.gd" id="1_o67qd"]
-[ext_resource type="Texture2D" uid="uid://ct7nc7kftj8ww" path="res://assets/ui/icons/sleeps.png" id="2_5t3r3"]
-[ext_resource type="Texture2D" uid="uid://dxboaa0fagb8w" path="res://assets/ui/icons/stars.png" id="3_2yups"]
+[ext_resource type="Texture2D" uid="uid://ceras7mqvdeyq" path="res://assets/ui/frames/Card1.png" id="2_byv6u"]
+[ext_resource type="Texture2D" uid="uid://djxd6mp6ijsr2" path="res://assets/ui/buttons/ButtonNormal.png" id="3_u8wdj"]
+[ext_resource type="Texture2D" uid="uid://djqxaig1flotw" path="res://assets/ui/buttons/ButtonPressed.png" id="4_4vbbt"]
+[ext_resource type="Texture2D" uid="uid://caih4e5disiym" path="res://assets/ui/buttons/ButtonHover.png" id="5_35d07"]
+[ext_resource type="Texture2D" uid="uid://b2ncqyth484xc" path="res://assets/ui/frames/Container.png" id="6_4vbbt"]
+[ext_resource type="Texture2D" uid="uid://jjkc33na0xlg" path="res://assets/ui/icons/Chat.png" id="7_35d07"]
 
 [node name="Oasis_ui" type="Control"]
 self_modulate = Color(0.42352942, 0.60784316, 0.8117647, 1)
@@ -23,49 +27,103 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.42352942, 0.60784316, 0.8117647, 1)
 
-[node name="Meditationrelax" type="Node2D" parent="."]
+[node name="EmotionHoleEntry" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="sleeps" type="Sprite2D" parent="Meditationrelax"]
-position = Vector2(671.72064, 348.11456)
-scale = Vector2(0.029584145, 0.036268745)
-texture = ExtResource("2_5t3r3")
-region_enabled = true
-region_rect = Rect2(0, 0, 2047.133, 1648.961)
+[node name="BackgroundPanel1" type="NinePatchRect" parent="EmotionHoleEntry"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 299.0
+offset_right = 650.0
+offset_bottom = 499.0
+texture = ExtResource("2_byv6u")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
 
-[node name="Button1" type="Button" parent="Meditationrelax/sleeps"]
-self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1004.6133
-offset_top = -830.3164
-offset_right = -1023.5
-offset_bottom = -796.42773
-grow_horizontal = 2
-grow_vertical = 2
-text = "冥想"
+[node name="Emotiontreehole" type="TextureButton" parent="EmotionHoleEntry/BackgroundPanel1"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 72.0
+offset_right = 505.0
+offset_bottom = 140.0
+texture_normal = ExtResource("3_u8wdj")
+texture_pressed = ExtResource("4_4vbbt")
+texture_hover = ExtResource("5_35d07")
 
-[node name="Stressrelease" type="Node2D" parent="."]
+[node name="Container" type="Sprite2D" parent="EmotionHoleEntry"]
+position = Vector2(206, 401)
+texture = ExtResource("6_4vbbt")
 
-[node name="stars" type="Sprite2D" parent="Stressrelease"]
-position = Vector2(673, 450)
-scale = Vector2(0.029296856, 0.03289476)
-texture = ExtResource("3_2yups")
-region_enabled = true
-region_rect = Rect2(0, 0, 2048, 1824.6289)
+[node name="Chat" type="Sprite2D" parent="EmotionHoleEntry"]
+position = Vector2(207, 401)
+texture = ExtResource("7_35d07")
 
-[node name="Button2" type="Button" parent="Stressrelease/stars"]
-self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1024.0
-offset_top = -911.999
-offset_right = -1024.0
-offset_bottom = -880.999
-grow_horizontal = 2
-grow_vertical = 2
-text = "小游戏"
+[node name="MeditationEntry" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[connection signal="pressed" from="Meditationrelax/sleeps/Button1" to="." method="_on_button_meditation_relax_pressed"]
-[connection signal="pressed" from="Stressrelease/stars/Button2" to="." method="_on_button_small_game_pressed"]
+[node name="BackgroundPanel2" type="NinePatchRect" parent="MeditationEntry"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 559.0
+offset_right = 650.0
+offset_bottom = 759.0
+texture = ExtResource("2_byv6u")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Meditation_relax" type="TextureButton" parent="MeditationEntry/BackgroundPanel2"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 72.0
+offset_right = 505.0
+offset_bottom = 140.0
+texture_normal = ExtResource("3_u8wdj")
+texture_pressed = ExtResource("4_4vbbt")
+texture_hover = ExtResource("5_35d07")
+
+[node name="Sprite2D" type="Sprite2D" parent="MeditationEntry/BackgroundPanel2"]
+position = Vector2(91, 106)
+texture = ExtResource("6_4vbbt")
+
+[node name="StressEntry" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackgroundPanel3" type="NinePatchRect" parent="StressEntry"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 819.0
+offset_right = 650.0
+offset_bottom = 1019.0
+texture = ExtResource("2_byv6u")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="Stress_release" type="TextureButton" parent="StressEntry/BackgroundPanel3"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 72.0
+offset_right = 505.0
+offset_bottom = 140.0
+texture_normal = ExtResource("3_u8wdj")
+texture_pressed = ExtResource("4_4vbbt")
+texture_hover = ExtResource("5_35d07")
+
+[node name="Sprite2D" type="Sprite2D" parent="StressEntry/BackgroundPanel3"]
+position = Vector2(86, 98)
+texture = ExtResource("6_4vbbt")
+
+[connection signal="pressed" from="EmotionHoleEntry/BackgroundPanel1/Emotiontreehole" to="." method="_on_emotiontreehole_pressed"]
+[connection signal="pressed" from="MeditationEntry/BackgroundPanel2/Meditation_relax" to="." method="_on_meditation_relax_pressed"]
+[connection signal="pressed" from="StressEntry/BackgroundPanel3/Stress_release" to="." method="_on_stress_release_pressed"]
