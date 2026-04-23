@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3a35uq13t06b"]
 
-[ext_resource type="Script" uid="uid://ch1ncfhw55gus" path="res://assets/scenes/emotion_treehole.gd" id="1_4lj8y"]
+[ext_resource type="Script" uid="uid://ch1ncfhw55gus" path="res://assets/scripts/emotion_treehole.gd" id="1_4lj8y"]
 
 [node name="emotion_treehole" type="Control"]
 layout_mode = 3
