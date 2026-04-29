@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://ca4l63ua1imxf"]
+
+[ext_resource type="Texture2D" uid="uid://d35dvse6f34ni" path="res://assets/ui/icons/Frame 1.png" id="1_dds0e"]
+[ext_resource type="PackedScene" uid="uid://cfx3evuf3qdl2" path="res://assets/scenes/game1/player_1.tscn" id="2_dds0e"]
+[ext_resource type="PackedScene" uid="uid://itt2m6usp188" path="res://assets/scenes/game1/joystick.tscn" id="3_dds0e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doqow"]
+size = Vector2(748, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dds0e"]
+size = Vector2(19.5, 1319)
+
+[node name="main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(361, 641)
+texture = ExtResource("1_dds0e")
+metadata/_edit_lock_ = true
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
+position = Vector2(350, -17)
+shape = SubResource("RectangleShape2D_doqow")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
+position = Vector2(-12, 646)
+shape = SubResource("RectangleShape2D_dds0e")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
+position = Vector2(356, 1294)
+shape = SubResource("RectangleShape2D_doqow")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
+position = Vector2(732, 638)
+shape = SubResource("RectangleShape2D_dds0e")
+
+[node name="player1" parent="." node_paths=PackedStringArray("joystick") instance=ExtResource("2_dds0e")]
+position = Vector2(363, 625)
+collision_layer = 2
+collision_mask = 5
+joystick = NodePath("../CanvasLayer/Joystick")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Joystick" parent="CanvasLayer" instance=ExtResource("3_dds0e")]
