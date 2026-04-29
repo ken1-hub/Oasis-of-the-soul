@@ -5,12 +5,12 @@ func _ready() -> void:
 	pass 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
 func _on_button_1_pressed() -> void:
-	print("进入游戏1") 
+	get_tree().change_scene_to_file("res://assets/scenes/game1/main.tscn")
 
 
 func _on_button_2_pressed() -> void:
