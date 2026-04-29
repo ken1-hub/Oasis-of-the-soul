@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct7nc7kftj8ww"
-path="res://.godot/imported/sleeps.png-fdc4f6206651ba1df33293ac69bc7aa7.ctex"
+uid="uid://drxkmicq5ce05"
+path="res://.godot/imported/Ellipse 3.png-adf43d26a329a0f98960059966a7bba0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/icons/sleeps.png"
-dest_files=["res://.godot/imported/sleeps.png-fdc4f6206651ba1df33293ac69bc7aa7.ctex"]
+source_file="res://assets/ui/icons/game1/Ellipse 3.png"
+dest_files=["res://.godot/imported/Ellipse 3.png-adf43d26a329a0f98960059966a7bba0.ctex"]
 
 [params]
 

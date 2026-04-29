@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drxkmicq5ce05"
-path="res://.godot/imported/Ellipse 3.png-03b1c5407123c118a126eec29062befd.ctex"
+uid="uid://b1y4ti7numqyr"
+path="res://.godot/imported/Ellipse 2.png-fa165de884d4b55c4d5d4e2d4724655e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/icons/Ellipse 3.png"
-dest_files=["res://.godot/imported/Ellipse 3.png-03b1c5407123c118a126eec29062befd.ctex"]
+source_file="res://assets/ui/icons/game1/Ellipse 2.png"
+dest_files=["res://.godot/imported/Ellipse 2.png-fa165de884d4b55c4d5d4e2d4724655e.ctex"]
 
 [params]
 
