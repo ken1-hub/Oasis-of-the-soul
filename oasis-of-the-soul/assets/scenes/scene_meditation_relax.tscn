@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://5nifo4kn0ycy"]
+[gd_scene load_steps=2 format=3 uid="uid://5nifo4kn0ycy"]
 
 [ext_resource type="Script" uid="uid://dovop1y8qr8ux" path="res://assets/scripts/scene_meditation_relax.gd" id="1_4hj56"]
-[ext_resource type="Script" uid="uid://8bjxlqponu8d" path="res://assets/scenes/music_player.gd" id="2_4vj2e"]
-[ext_resource type="AudioStream" uid="uid://dr2b14yqg8vk1" path="res://assets/music/inochinonamae.ogg" id="3_4hj56"]
 
 [node name="meditation_relax" type="Control"]
 layout_mode = 3
@@ -18,79 +16,25 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -8.0
-offset_right = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.28614834, 0.46571213, 0.66133046, 1)
 
-[node name="Control" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Return" type="ColorRect" parent="Control"]
+[node name="Return" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 616.0
-offset_top = 1192.0
-offset_right = 688.0
-offset_bottom = 1266.0
+offset_left = 618.0
+offset_top = 1174.0
+offset_right = 680.0
+offset_bottom = 1240.0
 color = Color(0, 0, 0, 1)
 
-[node name="Button_return" type="Button" parent="Control"]
+[node name="Button_return" type="Button" parent="Return"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 632.0
-offset_top = 1208.0
-offset_right = 632.0
-offset_bottom = 1208.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MusicPlayer" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -24.0
-offset_top = -32.0
-offset_right = 16.0
-offset_bottom = 8.0
-grow_horizontal = 2
-grow_vertical = 0
-script = ExtResource("2_4vj2e")
-
-[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="MusicPlayer"]
-position = Vector2(32, -24)
-stream = ExtResource("3_4hj56")
-
-[node name="SeekBar" type="HSlider" parent="MusicPlayer"]
-layout_mode = 1
-anchors_preset = -1
-anchor_bottom = 0.4
-offset_left = -188.0
-offset_top = -72.0
-offset_right = 188.0
-offset_bottom = -72.0
-
-[node name="TimeLabel" type="Label" parent="MusicPlayer"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 4.9
-anchor_top = -1.8000001
-anchor_right = 5.9
-anchor_bottom = -1.225
-
-[node name="PlayButton" type="Button" parent="MusicPlayer"]
-layout_mode = 0
-offset_left = -132.0
-offset_top = -40.0
-offset_right = -92.0
-
-[connection signal="pressed" from="Control/Button_return" to="." method="_on_button_return_pressed"]
-[connection signal="pressed" from="MusicPlayer/PlayButton" to="MusicPlayer" method="_on_play_button_pressed"]
+[connection signal="pressed" from="Return/Button_return" to="." method="_on_button_return_pressed"]
