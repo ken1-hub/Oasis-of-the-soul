@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://5nifo4kn0ycy"]
 
 [ext_resource type="Script" uid="uid://dovop1y8qr8ux" path="res://assets/scripts/scene_meditation_relax.gd" id="1_4hj56"]
-[ext_resource type="Script" path="res://assets/scenes/music_player.gd" id="2_4vj2e"]
-[ext_resource type="AudioStream" path="res://assets/music/inochinonamae.ogg" id="3_4hj56"]
+[ext_resource type="Script" uid="uid://8bjxlqponu8d" path="res://assets/scenes/music_player.gd" id="2_4vj2e"]
+[ext_resource type="AudioStream" uid="uid://dr2b14yqg8vk1" path="res://assets/music/inochinonamae.ogg" id="3_4hj56"]
 
 [node name="meditation_relax" type="Control"]
 layout_mode = 3
@@ -12,8 +12,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4hj56")
-
-[node name="2D" type="Node2D" parent="."]
 
 [node name="background" type="ColorRect" parent="."]
 layout_mode = 1
