@@ -1,6 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3a35uq13t06b"]
+[gd_scene load_steps=10 format=3 uid="uid://b3a35uq13t06b"]
 
 [ext_resource type="Script" uid="uid://ch1ncfhw55gus" path="res://assets/scripts/emotion_treehole.gd" id="1_4lj8y"]
+[ext_resource type="Texture2D" uid="uid://djxd6mp6ijsr2" path="res://assets/ui/buttons/ButtonNormal.png" id="2_e8ur2"]
+[ext_resource type="Texture2D" uid="uid://djqxaig1flotw" path="res://assets/ui/buttons/ButtonPressed.png" id="3_m7ik5"]
+[ext_resource type="Texture2D" uid="uid://caih4e5disiym" path="res://assets/ui/buttons/ButtonHover.png" id="4_eq6fs"]
+[ext_resource type="Script" uid="uid://c7ws0iqw8gkg7" path="res://assets/scripts/control.gd" id="5_m7ik5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7ik5"]
+bg_color = Color(0.3529412, 0.69411767, 0.9529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eq6fs"]
+bg_color = Color(0.5316155, 0.7263887, 0.8938766, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="FontVariation" id="FontVariation_wx8et"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7adw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 15
+border_width_right = 15
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [node name="emotion_treehole" type="Control"]
 layout_mode = 3
@@ -9,7 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4lj8y")
+script = ExtResource("5_m7ik5")
 
 [node name="background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -18,22 +44,58 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.35532802, 0.6927472, 0.9523148, 1)
 
-[node name="Return" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 1174.0
-offset_right = 680.0
-offset_bottom = 1240.0
-color = Color(0, 0, 0, 1)
-
-[node name="Button_return" type="Button" parent="Return"]
-self_modulate = Color(1, 1, 1, 0)
+[node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 100.0
+offset_right = -10.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m7ik5")
+metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Return/Button_return" to="." method="_on_button_return_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_eq6fs")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 30
+scroll_following = true
+scroll_following_visible_characters = true
+
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_wx8et")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_o7adw")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Emotiontreehole" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 87.0
+offset_right = 153.0
+offset_bottom = 155.0
+rotation = 3.1415927
+texture_normal = ExtResource("2_e8ur2")
+texture_pressed = ExtResource("3_m7ik5")
+texture_hover = ExtResource("4_eq6fs")
+script = ExtResource("1_4lj8y")
+
+[connection signal="pressed" from="Emotiontreehole" to="." method="_on_emotiontreehole_pressed"]
