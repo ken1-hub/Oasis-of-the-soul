@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3a35uq13t06b"]
+[gd_scene format=3 uid="uid://b3a35uq13t06b"]
 
 [ext_resource type="Script" uid="uid://ch1ncfhw55gus" path="res://assets/scripts/emotion_treehole.gd" id="1_4lj8y"]
 [ext_resource type="Texture2D" uid="uid://djxd6mp6ijsr2" path="res://assets/ui/buttons/ButtonNormal.png" id="2_e8ur2"]
@@ -28,7 +28,7 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[node name="emotion_treehole" type="Control"]
+[node name="emotion_treehole" type="Control" unique_id=1324995341]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,7 +37,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_m7ik5")
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background" type="ColorRect" parent="." unique_id=1115228741]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,7 +46,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.35532802, 0.6927472, 0.9523148, 1)
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1384305615]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,16 +60,16 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_m7ik5")
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1006722621]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer" unique_id=1652715354]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_eq6fs")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer" unique_id=1901358924]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -77,16 +77,16 @@ theme_override_font_sizes/normal_font_size = 30
 scroll_following = true
 scroll_following_visible_characters = true
 
-[node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer"]
+[node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer" unique_id=1489734124]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontVariation_wx8et")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_o7adw")
 
-[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=410242407]
 
-[node name="Emotiontreehole" type="TextureButton" parent="."]
+[node name="Emotiontreehole" type="TextureButton" parent="." unique_id=563419243]
 layout_mode = 0
 offset_left = 85.0
 offset_top = 87.0
@@ -98,4 +98,4 @@ texture_pressed = ExtResource("3_m7ik5")
 texture_hover = ExtResource("4_eq6fs")
 script = ExtResource("1_4lj8y")
 
-[connection signal="pressed" from="Emotiontreehole" to="." method="_on_emotiontreehole_pressed"]
+[connection signal="pressed" from="Emotiontreehole" to="Emotiontreehole" method="_on_pressed"]
