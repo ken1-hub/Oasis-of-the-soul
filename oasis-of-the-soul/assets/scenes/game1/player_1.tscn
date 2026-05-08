@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfx3evuf3qdl2"]
+
+[ext_resource type="Script" uid="uid://kdpsawc0xv4d" path="res://assets/scripts/game1/player1.gd" id="1_knr8w"]
+[ext_resource type="Texture2D" uid="uid://b1y4ti7numqyr" path="res://assets/ui/icons/game1/Ellipse 2.png" id="2_uhxlo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uhxlo"]
+radius = 22.022715
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ie0o8"]
+radius = 28.0
+
+[node name="player1" type="CharacterBody2D"]
+script = ExtResource("1_knr8w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_uhxlo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uhxlo")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+visible = false
+shape = SubResource("CircleShape2D_ie0o8")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
