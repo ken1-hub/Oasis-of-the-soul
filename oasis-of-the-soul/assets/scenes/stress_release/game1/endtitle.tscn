@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdo7pcms2aque"]
+[gd_scene format=3 uid="uid://cdo7pcms2aque"]
 
-[ext_resource type="Script" uid="uid://1g6bofcohnnx" path="res://assets/scripts/game1/endtitle.gd" id="1_3fuse"]
+[ext_resource type="Script" uid="uid://1g6bofcohnnx" path="res://assets/scripts/stress_release/game1/endtitle.gd" id="1_3fuse"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0i5g8"]
 font_size = 30

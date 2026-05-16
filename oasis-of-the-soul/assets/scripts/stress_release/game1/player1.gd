@@ -7,7 +7,7 @@ var is_dead : bool = false
 
 signal hit_enemy
 
-@onready var game_over_ui = preload("res://assets/scenes/game1/endtitle.tscn")
+@onready var game_over_ui = preload("res://assets/scenes/stress_release/game1/endtitle.tscn")
 
 func _physics_process(_sdelta: float) -> void:
 	if joystick == null:

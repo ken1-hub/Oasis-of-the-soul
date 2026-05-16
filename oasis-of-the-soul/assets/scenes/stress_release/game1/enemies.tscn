@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://fpg4nfobt4fk"]
+[gd_scene format=3 uid="uid://fpg4nfobt4fk"]
 
-[ext_resource type="Script" uid="uid://bdgyo606ybyq1" path="res://assets/scripts/game1/enemies.gd" id="1_muvbd"]
+[ext_resource type="Script" uid="uid://bdgyo606ybyq1" path="res://assets/scripts/stress_release/game1/enemies.gd" id="1_muvbd"]
 [ext_resource type="Texture2D" uid="uid://tktjoe3q3nlq" path="res://assets/ui/icons/game1/slime_body.png" id="1_narma"]
 [ext_resource type="Texture2D" uid="uid://fvy6kbr7bqpp" path="res://assets/ui/icons/game1/slime_face.png" id="2_muvbd"]
 

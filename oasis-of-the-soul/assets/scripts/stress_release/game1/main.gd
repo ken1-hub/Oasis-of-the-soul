@@ -1,9 +1,9 @@
 extends Node2D
 
-var enemy_scene: PackedScene = preload("res://assets/scenes/game1/enemies.tscn")
+var enemy_scene: PackedScene = preload("res://assets/scenes/stress_release/game1/enemies.tscn")
 
 @onready var player1 = $player1
-@onready var game_over_ui = preload("res://assets/scenes/game1/endtitle.tscn")
+@onready var game_over_ui = preload("res://assets/scenes/stress_release/game1/endtitle.tscn")
 
 
 func _on_enemytimer_timeout() -> void:

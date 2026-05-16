@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqftn8wwii62h"]
+[gd_scene format=3 uid="uid://cqftn8wwii62h"]
 
 [ext_resource type="Script" uid="uid://cijx8oqpjmvb8" path="res://assets/scripts/oasis_ui.gd" id="1_o67qd"]
 [ext_resource type="Texture2D" uid="uid://ceras7mqvdeyq" path="res://assets/ui/frames/Card1.png" id="2_byv6u"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ncqyth484xc" path="res://assets/ui/frames/Container.png" id="6_4vbbt"]
 [ext_resource type="Texture2D" uid="uid://jjkc33na0xlg" path="res://assets/ui/icons/Chat.png" id="7_35d07"]
 
-[node name="Oasis_ui" type="Control"]
+[node name="Oasis_ui" type="Control" unique_id=747356340]
 self_modulate = Color(0.42352942, 0.60784316, 0.8117647, 1)
 layout_mode = 3
 anchors_preset = 15
@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_o67qd")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1192531201]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,12 +27,12 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.42352942, 0.60784316, 0.8117647, 1)
 
-[node name="EmotionHoleEntry" type="Control" parent="."]
+[node name="EmotionHoleEntry" type="Control" parent="." unique_id=187318327]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="BackgroundPanel1" type="NinePatchRect" parent="EmotionHoleEntry"]
+[node name="BackgroundPanel1" type="NinePatchRect" parent="EmotionHoleEntry" unique_id=1784645551]
 layout_mode = 0
 offset_left = 110.0
 offset_top = 299.0
@@ -44,7 +44,7 @@ patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
 
-[node name="Emotiontreehole" type="TextureButton" parent="EmotionHoleEntry/BackgroundPanel1"]
+[node name="Emotiontreehole" type="TextureButton" parent="EmotionHoleEntry/BackgroundPanel1" unique_id=1094602852]
 layout_mode = 0
 offset_left = 437.0
 offset_top = 72.0
@@ -54,20 +54,20 @@ texture_normal = ExtResource("3_u8wdj")
 texture_pressed = ExtResource("4_4vbbt")
 texture_hover = ExtResource("5_35d07")
 
-[node name="Container" type="Sprite2D" parent="EmotionHoleEntry"]
+[node name="Container" type="Sprite2D" parent="EmotionHoleEntry" unique_id=330535066]
 position = Vector2(206, 401)
 texture = ExtResource("6_4vbbt")
 
-[node name="Chat" type="Sprite2D" parent="EmotionHoleEntry"]
+[node name="Chat" type="Sprite2D" parent="EmotionHoleEntry" unique_id=1861203232]
 position = Vector2(207, 401)
 texture = ExtResource("7_35d07")
 
-[node name="MeditationEntry" type="Control" parent="."]
+[node name="MeditationEntry" type="Control" parent="." unique_id=740854750]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="BackgroundPanel2" type="NinePatchRect" parent="MeditationEntry"]
+[node name="BackgroundPanel2" type="NinePatchRect" parent="MeditationEntry" unique_id=1065535948]
 layout_mode = 0
 offset_left = 110.0
 offset_top = 559.0
@@ -79,7 +79,7 @@ patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
 
-[node name="Meditation_relax" type="TextureButton" parent="MeditationEntry/BackgroundPanel2"]
+[node name="Meditation_relax" type="TextureButton" parent="MeditationEntry/BackgroundPanel2" unique_id=1593523682]
 layout_mode = 0
 offset_left = 437.0
 offset_top = 72.0
@@ -89,16 +89,16 @@ texture_normal = ExtResource("3_u8wdj")
 texture_pressed = ExtResource("4_4vbbt")
 texture_hover = ExtResource("5_35d07")
 
-[node name="Sprite2D" type="Sprite2D" parent="MeditationEntry/BackgroundPanel2"]
+[node name="Sprite2D" type="Sprite2D" parent="MeditationEntry/BackgroundPanel2" unique_id=524016722]
 position = Vector2(91, 106)
 texture = ExtResource("6_4vbbt")
 
-[node name="StressEntry" type="Control" parent="."]
+[node name="StressEntry" type="Control" parent="." unique_id=2016505093]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="BackgroundPanel3" type="NinePatchRect" parent="StressEntry"]
+[node name="BackgroundPanel3" type="NinePatchRect" parent="StressEntry" unique_id=571409286]
 layout_mode = 0
 offset_left = 110.0
 offset_top = 819.0
@@ -110,7 +110,7 @@ patch_margin_top = 10
 patch_margin_right = 10
 patch_margin_bottom = 10
 
-[node name="Stress_release" type="TextureButton" parent="StressEntry/BackgroundPanel3"]
+[node name="Stress_release" type="TextureButton" parent="StressEntry/BackgroundPanel3" unique_id=1393589743]
 layout_mode = 0
 offset_left = 437.0
 offset_top = 72.0
@@ -120,7 +120,7 @@ texture_normal = ExtResource("3_u8wdj")
 texture_pressed = ExtResource("4_4vbbt")
 texture_hover = ExtResource("5_35d07")
 
-[node name="Sprite2D" type="Sprite2D" parent="StressEntry/BackgroundPanel3"]
+[node name="Sprite2D" type="Sprite2D" parent="StressEntry/BackgroundPanel3" unique_id=2120820463]
 position = Vector2(86, 98)
 texture = ExtResource("6_4vbbt")
 
