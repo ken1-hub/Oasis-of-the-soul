@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ch1ncfhw55gus" path="res://assets/scripts/emotion_treehole.gd" id="1_4lj8y"]
 [ext_resource type="Texture2D" uid="uid://djxd6mp6ijsr2" path="res://assets/ui/buttons/ButtonNormal.png" id="2_e8ur2"]
+[ext_resource type="Script" uid="uid://clotvkv8378dw" path="res://assets/scenes/rich_text_label.gd" id="2_wx8et"]
 [ext_resource type="Texture2D" uid="uid://djqxaig1flotw" path="res://assets/ui/buttons/ButtonPressed.png" id="3_m7ik5"]
 [ext_resource type="Texture2D" uid="uid://caih4e5disiym" path="res://assets/ui/buttons/ButtonHover.png" id="4_eq6fs"]
-[ext_resource type="Script" uid="uid://c7ws0iqw8gkg7" path="res://assets/scripts/control.gd" id="5_m7ik5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m7ik5"]
 bg_color = Color(0.3529412, 0.69411767, 0.9529412, 1)
@@ -35,7 +35,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("5_m7ik5")
 
 [node name="background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -57,6 +56,7 @@ offset_right = -10.0
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_m7ik5")
 metadata/_edit_use_anchors_ = true
 
@@ -67,15 +67,19 @@ theme_override_constants/separation = 10
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_eq6fs")
 
+<<<<<<< Updated upstream
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer/ScrollContainer"]
+=======
+[node name="ChatContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/ScrollContainer"]
+>>>>>>> Stashed changes
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 30
-scroll_following = true
-scroll_following_visible_characters = true
+theme_override_constants/separation = 8
+script = ExtResource("2_wx8et")
 
 [node name="LineEdit" type="LineEdit" parent="PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 60)

@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Oasis of the soul"
 run/main_scene="res://assets/scenes/oasis_ui.tscn"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
@@ -27,6 +27,7 @@ window/stretch/mode="canvas_items"
 
 window/stretch/aspect="expand"
 
+<<<<<<< Updated upstream
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
@@ -38,6 +39,11 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Enemies"
 
+=======
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_ai_hook/plugin.cfg")
+>>>>>>> Stashed changes
 
 [input]
 
